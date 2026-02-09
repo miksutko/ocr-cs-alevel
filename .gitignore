@@ -1,0 +1,14 @@
+# Obsidian system files
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/graph.json
+.obsidian/appearance.json
+
+# If you want to keep your plugins but not their specific data/cache
+.obsidian/plugins/*/data.json
+.obsidian/cache/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
