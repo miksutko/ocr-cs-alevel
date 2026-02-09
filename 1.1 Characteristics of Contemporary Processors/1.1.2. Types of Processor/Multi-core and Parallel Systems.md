@@ -1,7 +1,11 @@
 Modern computers typically have **multicore CPUs** and often include parallel processing capabilities.
 1. **Multi-Core CPUs**:
     - CPUs with multiple **independent cores**, each capable of executing instructions simultaneously.
+<<<<<<< HEAD
     - **Benefit**: Higher performance for complex tasks like video editing or running multiple programs.
+=======
+    - **Benefit**: Higher performance for complex tasks like video editing or running multiple progQrams.
+>>>>>>> f7535c9 (Sorting Algorithms)
     **Example**:
     - A quad-core processor can handle four tasks simultaneously, such as rendering a video, running a browser, and gaming.
 2. **Parallel Systems**:
