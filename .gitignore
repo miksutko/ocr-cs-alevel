@@ -3,6 +3,7 @@
 .obsidian/workspace-mobile.json
 .obsidian/graph.json
 .obsidian/appearance.json
+.obsidian
 
 # If you want to keep your plugins but not their specific data/cache
 .obsidian/plugins/*/data.json

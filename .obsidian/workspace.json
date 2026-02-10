@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2.3 Algorithms/2.3.3. Sorting Algorithms.md",
+                "file": "2.3 Algorithms/2.3.4. Searching Algorithms.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2.3.3. Sorting Algorithms"
+              "title": "2.3.4. Searching Algorithms"
             }
           },
           {
@@ -193,11 +193,12 @@
       "bases:Create new base": false
     }
   },
-  "active": "44731d75840c71d2",
+  "active": "6367882af497642e",
   "lastOpenFiles": [
-    "Files/Pasted image 20260209095727.png",
-    "2.3 Algorithms/2.3.3. Sorting Algorithms.md",
     "2.3 Algorithms/2.3 Algorithms.md",
+    "2.3 Algorithms/2.3.4. Searching Algorithms.md",
+    "2.3 Algorithms/2.3.3. Sorting Algorithms.md",
+    "Files/Pasted image 20260209095727.png",
     "Computer Science Revision & Notes.md",
     "2.2 Problem Solving and Programming/2.2 Problem Solving and Programming.md",
     "2.1 Elements of Computational Thinking/2.1 Elements of Computational Thinking.md",
