@@ -1,11 +1,10 @@
-An **Integrated Development Environment (IDE)** is a program that provides a set of tools to make it easier for programmers to write, develop, and debug code. Examples of IDEs include **PyCharm**, **Eclipse**, **IDLE**, and **Microsoft Visual Studio**. Common features of IDEs include:
-- **Stepping**:  
-    Allows you to monitor the effect of each individual line of code by executing a single line at a time.
-- **Variable Watch**:  
-    Sometimes used to pinpoint errors, this feature allows you to observe how the contents of a variable change in real-time through the execution of a program.
-- **Breakpoint**:  
-    IDEs allow users to set a point in the program at which it will stop. This can either be based on a condition or set to occur at a specific line, helping to pinpoint where an error is occurring.
-- **Source Code Editor**:  
-    The editor enhances the coding process by providing features such as autocompletion of words, indentation, syntax highlighting, and automatic bracket completion.
-- **Debugging Tools**:  
-    Some IDEs offer run-time detection of errors with guidance on where in the code they are likely to have occurred through line numbers and highlighting.
+An IDE is a set of tools to help you write and debug code. Common features include:
+- Syntax highlighting, line numbering, help pop-ups, and showing matching constructs (e.g., matching IF/ELSE).
+- **Automatic error checking**: flags issues before running where possible.
+- **Error reports**: lists errors that must be fixed before execution.
+- **Breakpoints**: pause execution at a chosen line to inspect variable values.
+- **Stepping through**: execute code one instruction at a time to see exactly when values change.    
+- **Runtime error identification**: can stop during execution, highlight the line, and suggest fixes.
+
+**IDE vs Notepad (exam-friendly comparison):**
+- A basic text editor (like Notepad) can write code, but it usually **doesn’t provide integrated debugging** (breakpoints/stepping), **doesn’t automatically check errors**, and gives less support for readability (syntax highlighting/line tools). IDEs include these tools, so debugging is faster and mistakes are easier to spot.

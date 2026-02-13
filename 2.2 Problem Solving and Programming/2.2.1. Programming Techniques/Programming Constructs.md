@@ -1,24 +1,16 @@
-A crucial part of solving a problem is simplifying it to represent it in a way that makes it easier to understand and thus program. The following constructs are used to represent a program’s control flow in a popular subsection of procedural programming called **structured programming**:
-- **Sequence**  
-    Code is executed line-by-line, from top to bottom.
-- **Branching**  
-    A certain block of code is run if a specific condition is met, using IF statements. This is also known as **selection**.
-- **Iteration**  
-    A block of code is executed a certain number of times or while a condition is met. Iteration uses **FOR**, **WHILE**, or **REPEAT UNTIL** loops. Iteration can be either:
-    - **Count-controlled**  
-        Iteration is repeated a given number of times.
-```
-        for i in range(0, 10):
-		    print(i)
-```
-	- **Count-controlled**
-        Iteration is repeated a given number of times.
-```
-        while i <= 20:
-		    print("Not true")
-		    i = i + 1
-```
-
-
-
-
+# Sequence
+- **Sequence** means instructions run **once each**, in the **order written** (top to bottom).
+# Branching (Selection)
+Branching is used when the program must **choose** what to do next based on a condition.
+  
+Common forms:
+- **IF**: run a block only if a condition is true.
+- **IF … ELSE**: one block runs if true, the other runs if false.
+- **IF … ELIF … ELSE**: check multiple conditions in order; the first true block runs.
+- **SELECT CASE / switch-case** (not in every language): selects an outcome based on a single variable’s value; often includes a **default/CASE ELSE**.
+# Iteration (Loops)
+Iteration repeats instructions:
+- **Count-controlled**: repeat a set number of times (typically **FOR** loops).
+- **Condition-controlled**: repeat until a condition is met (typically **WHILE** loops).
+# Nesting
+- **Nesting** = placing one construct inside another (e.g., an IF inside a WHILE loop, or a loop inside an IF). This is common in real programs.
