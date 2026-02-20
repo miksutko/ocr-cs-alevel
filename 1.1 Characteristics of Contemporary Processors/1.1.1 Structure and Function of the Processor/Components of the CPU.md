@@ -1,25 +1,19 @@
-- **Processor**: Known as the computer's brain; executes instructions to run programs.
+- **Processor**: the computer's brain; executes instructions to run programs. Made up of a Control Unit (CU), Registers and Arithmetic and Logic Unit (ALU).
 
 ![[Pasted image 20241227173034.png]]
 # 1. Control Unit (CU):
-- Directs CPU operations and coordinates activities:
-    - Controls CPU actions.
-    - Manages data flow between CPU and other devices.
-    - Accepts, decodes, and executes instructions.
-    - Stores results back into memory.
-- **Example:**
-	- Imagine a busy restaurant. The **Control Unit** is like the **manager** of the restaurant, ensuring all staff (components of the CPU) perform their tasks efficiently and in the correct order.
+- This is where instructions are decoded. The CU also controls the data within the CPU and how it moves around.
 ---
 # 2. Registers:
-- **Definition**: Small, high-speed memory cells for temporary data storage.
+- **Definition**: temporary storage/memory locations inside the CPU which are used for a single specific purpose. They have a faster access speed than RAM / secondary storage.
 
-| Registers                          | Purpose                                                                                                                                                           |
-| ---------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Program Counter (PC)               | Stores the address of the next instruction to be fetched.                                                                                                         |
-| Memory Address Register (MAR)      | Holds the memory address of the instruction to be accessed in memory, sent from PC. It sends these addresses to memory down the address bus.                      |
-| Memory Data Register (MDR)         | Stores the data/instruction that has been accessed from memory. It sends/receives this data from the data bus.                                                    |
-| Current Instruction Register (CIR) | Holds the current instruction being executed, split up into operand (data/address to operate on) and opcode (specifies the operation type) as assembly mnemonics. |
-| Accumulator (ACC)                  | A general-purpose register that temporarily stores the result from calculations. Also used as a buffer for I/O in processor.                                      |
+| Registers                          | Purpose                                                                                                                                       |
+| ---------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| Program Counter (PC)               | Stores the address of the next instruction to be fetched.                                                                                     |
+| Memory Address Register (MAR)      | This is where addresses are stored, either for where data is being sent in memory, or where it is being fetched from                          |
+| Memory Data Register (MDR)         | This is where data/instructions are stored, either before it sent to memory, or after being fetched                                           |
+| Current Instruction Register (CIR) | When an instruction has been fetched from memory it is loaded here before being split into opcode and operand. After this, it will be decoded |
+| Accumulator (ACC)                  | This is where values are stored temporarily, either after they’ve been inputted or loaded, or after being calculated in the ALU               |
 
 | Register | Role                     | Example Value     |
 | -------- | ------------------------ | ----------------- |
@@ -31,9 +25,19 @@
 
 ---
 # 3. Arithmetic and Logic Unit (ALU):
-- Performs **arithmetic operations**: e.g., addition, subtraction (on fixed/floating point numbers).
-- Performs **logical operations**: Boolean logic like AND, OR, NOT, XOR.
-#### Example: Addition Instruction
+- This performs any arithmetic calculations (e.g. adding binary) or any logic comparisons (using AND, OR, NOT).
+- Made up of several components:
+	- **Arithmetic circuit**
+	    - This carries out any arithmetic (addition, subtraction, multiplication or division)
+	- **Logic circuit**
+	    - This carries out operations like AND, OR, NOT, XOR
+	- **Registers**
+	    - These are additional registers to those mentioned above and can store data
+	- **Status flags**
+	    - This includes overflow flags (if the value is too large for the register) or could include a zero flag (to tell if the answer is 0 easily)
+	- **Buses**
+	    - These are used to transport data around the ALU and to other parts of the CPU
+## Example: Addition Instruction
 1. **Operation**: Add two numbers.
 2. **Input**: Two binary numbers.
     - Example: `5` (binary: `0101`) and `3` (binary: `0011`).
@@ -42,37 +46,29 @@
 4. **Output**: The result of the addition (`1000`).
 ---
 # 4. Buses in the CPU:
-- **Definition**: Parallel wires connecting CPU components; grouped as the **system bus**.
-- **Bus Width**: Number of wires; determines bits transferable at once (e.g., 8, 16, 32, 64 bits).
-#### Types of Buses:
+- There are three main buses that connect the CPU, main memory (RAM) and other components:
+	- Data bus
+	- Address bus
+	- Control bus
+## Types of Buses:
 1. **Data Bus**:
-	- **Purpose**: Transfers actual data (operands, instructions, or memory addresses) between the CPU (registers, ALU, control unit), RAM (main memory) and I/O devices (in some architectures)
-	- **Direction**: **Bi-directional** (data can flow both ways).
+	- **Purpose**: Transfers data and instructions between the CPU, memory and input/output devices
+	- **Direction**: Read/Write (Bidirectional)
 	- **In a CPU Example**:
 		- Suppose the CPU needs to add two numbers stored in memory:
 	    1. The CPU uses the **data bus** to fetch the numbers (e.g., **7** and **5**) from memory.
 	    2. After the addition, the CPU uses the **data bus** again to send the result (e.g., **12**) back to memory.
 2. **Address Bus**: 
-	- **Purpose**: Transmits the memory addresses being sent from CPU to RAM.
-	- **Direction**: **Uni-directional** (from CPU to memory or I/O devices).
+	- **Purpose**: Transfers the memory address of where data or instructions are to be read from or written to
+	- **Direction**: Write only (Unidirectional) CPU → Memory/I/O
 	- **In a CPU Example**:
 		- Continuing the example of adding two numbers:
 	    1. The CPU uses the **address bus** to point to the memory location where the first number (**7**) is stored.
 	    2. The address bus then points to the memory location of the second number (**5**) for retrieval.
 3. **Control Bus**: 
-    - **Purpose**: Sends control signals to manage how the CPU and other components communicate e.g. read or write
-	- **Direction**: **Bi-directional** (coordinates signals both ways).
+    - **Purpose**: Transfers control signals used to manage the operations of the computer system (e.g. memory read, memory write, interrupt requests)
+	- **Direction**: Sends signals (Bidirectional)
 	- **In a CPU Example**:
 		- While adding two numbers:
 	    1. The control bus sends a **"read" signal** to memory, instructing it to send the number **7** to the CPU.
 	    2. After the CPU processes the addition, the control bus sends a **"write" signal**, telling memory to store the result (**12**).
----
-# 5. Pipelining:
-- **Definition**: process of completing the fetch-decode-execute cycles of 3 separate instructions simultaneously. Allows one instruction to be fetched as the previous one is being decoded and the one before is being executed, reducing the amount of the CPU which is kept idle. However, if just/branch instructions exist the code will not pipeline well.
-- **Purpose**: Reduces CPU idle time, improves efficiency.
-#### **Example of stages in pipelining for a webpage**
-1. **Fetch**: The CPU retrieves the instructions (e.g., "Download HTML, CSS, images") from memory.
-2. **Decode**: The CPU decodes each instruction to determine what it needs to do (e.g., "Parse HTML structure").
-3. **Execute**: The CPU executes the instruction (e.g., "Render a section of the page").
-4. **Write Back**: The CPU stores results or sends them to other components (e.g., "Display rendered content on the screen").
-

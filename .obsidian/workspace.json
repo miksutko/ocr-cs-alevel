@@ -13,22 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2.2 Problem Solving and Programming/2.2 Problem Solving and Programming.md",
+                "file": "1.1 Characteristics of Contemporary Processors/1.1.1 Structure and Function of the Processor/Components of the CPU.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2.2 Problem Solving and Programming"
-            }
-          },
-          {
-            "id": "32683535f8b79201",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "title": "Components of the CPU"
             }
           }
         ]
@@ -88,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "a828380985906852",
@@ -196,10 +185,13 @@
   },
   "active": "6367882af497642e",
   "lastOpenFiles": [
+    "1.1 Characteristics of Contemporary Processors/1.1.1 Structure and Function of the Processor/1.1.1 Structure and Function of the Processor.md",
+    "1.1 Characteristics of Contemporary Processors/1.1 Characteristics of Contemporary Processors.md",
+    "Computer Science Revision & Notes.md",
+    "2.2 Problem Solving and Programming/2.2 Problem Solving and Programming.md",
     "2.2 Problem Solving and Programming/2.2.1. Programming Techniques/2.2.1. Programming Techniques.md",
     "2.2 Problem Solving and Programming/2.2.1. Programming Techniques/Use of an IDE.md",
     "2.2 Problem Solving and Programming/2.2.1. Programming Techniques/Use of object-oriented techniques.md",
-    "2.2 Problem Solving and Programming/2.2 Problem Solving and Programming.md",
     "2.2 Problem Solving and Programming/2.2.2. Computational Methods.md",
     "2.2 Problem Solving and Programming/2.2.1. Programming Techniques/Global and Local Variables.md",
     "2.2 Problem Solving and Programming/2.2.1. Programming Techniques/Recursion.md",
@@ -212,17 +204,14 @@
     "2.3 Algorithms/2.3.5. Path Finding Algorithms.md",
     "2.3 Algorithms/2.3 Algorithms.md",
     "Files/Pasted image 20260209095727.png",
-    "Computer Science Revision & Notes.md",
     "2.1 Elements of Computational Thinking/2.1 Elements of Computational Thinking.md",
     "1.5 Legal, Moral, Cultural and Ethical Issues/1.5 Legal, Moral, Cultural and Ethical Issues.md",
     "1.4 Data Types, Data Structures and Algorithms/1.4 Data Types, Data Structures and Algorithms.md",
     "1.3 Exchanging Data/1.3 Exchanging Data.md",
     "1.2 Software and Software Development/1.2 Software and Software Development.md",
-    "1.1 Characteristics of Contemporary Processors/1.1 Characteristics of Contemporary Processors.md",
     "2.1 Elements of Computational Thinking/2.1.4. Thinking Logically.md",
     "2.1 Elements of Computational Thinking/2.1.5. Thinking Concurrently.md",
     "2.1 Elements of Computational Thinking/2.1.3. Thinking Procedurally/Order of steps needed to solve a problem.md",
-    "2.1 Elements of Computational Thinking/2.1.3. Thinking Procedurally/Identify the components of a solution.md",
     "Untitled.base"
   ]
 }
