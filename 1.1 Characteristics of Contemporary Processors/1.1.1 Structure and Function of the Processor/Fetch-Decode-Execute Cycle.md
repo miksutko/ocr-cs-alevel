@@ -1,5 +1,4 @@
-The **Fetch-Decode-Execute Cycle** is the process the CPU follows to execute an instruction. Let's break down each phase with examples to make it easier to understand.
-
+- The fetch-decode-execute cycle (FDE cycle) is the process that the CPU goes through repeatedly to process instructions
 --- 
 # 1. Fetch Phase:
 The CPU retrieves the next instruction from memory. This involves the following steps:

@@ -72,3 +72,14 @@
 		- While adding two numbers:
 	    1. The control bus sends a **"read" signal** to memory, instructing it to send the number **7** to the CPU.
 	    2. After the CPU processes the addition, the control bus sends a **"write" signal**, telling memory to store the result (**12**).
+---
+# 5. Pipelining
+- Pipelining is the process of carrying out multiple instructions concurrently 
+- Each instruction will be at a different stage of the fetch-decode-execute cycle 
+- One instruction can be fetched while the previous one is being decoded and the one before is being executed 
+- In the case of a branch (in a branch the instruction in the next location in memory is not necessarily executed next. See assembly language for more detail), the pipeline is flushed 
+- While one instruction is being executed, the next instruction will be decoded and the following instruction will be fetched
+- Pipelining increases instruction throughput by overlapping stages, while latency per instruction remains unchanged
+- The CPU is not idle while waiting for the next instruction which increases the speed of execution
+- The next instruction is fetched while the current one is decoded/executed
+- All parts of the processor can be used at any instance in time

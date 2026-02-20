@@ -1,28 +1,21 @@
 # 1. Clock Speed:
-**Definition**: Clock speed refers to how fast the CPU can process instructions. It is determined by the **system clock**, which switches between 0 and 1 to generate pulses. Each CPU operation starts on a clock pulse.
-- **Unit**: Measured in **Hertz (Hz)**, typically GHz (billions of cycles per second).
-- **Impact**:
-	- A higher clock speed means faster processing of instructions.
-	- Example: A CPU with a clock speed of **3.2 GHz** completes **3.2 billion cycles per second**.
-	- Limitation: Higher speeds can cause overheating, requiring better cooling.
+- The **clock** in the computer controls operations within the CPU. It repeatedly changes from 0 to 1 to 0 and so on - each one of these is referred to as a state change
+- A state change can represent one fetch-decode-execute cycle although some take more than one cycle
+- Clock speed is a measure of how many states changes the CPU performs per second. 1 cycle per second = 1 Hz
+- A typical computer may have a clock speed of 3-5 GHz = 3,000,000,000-5,000,000,000 Hz which is just over 3-5 billion cycles per second
+- If a computer has a higher clock speed, it will be able to execute more instructions per second and therefore carry out tasks more quicklyIf a computer has a higher clock speed, it will be able to execute more instructions per second and therefore carry out tasks more quickly
 # 2. Number of Cores:
-- **Definition**: A core is an independent processing unit within the CPU. Each core can execute its own **fetch-decode-execute cycle** simultaneously.
-    - **Impact**:
-        - More cores mean the CPU can handle multiple instructions at the same time.
-        - Example:
-            - A **dual-core** processor can handle **2 tasks** simultaneously.
-            - A **quad-core** processor can handle **4 tasks**.
-    - **Limitation**: Performance gains depend on software optimization. Some programs are not designed to use multiple cores efficiently.
+- A core is a processing unit within the CPU
+- A single core processor has one core but a computer can have a dual core processor, quad core processor or octa core processor, and even dozens or over a hundred cores depending on the system.
+- Normally each core will run at the same speed
+- This means that tasks are carried out more quickly using a multicore processor than a single core processor as each core can carry out its task (this is called parallel processing) but a dual core processor isn’t twice as fast as a single core processor as there is some time spent organising tasks between the cores
+- The speed of the CPU is also partially determined by the tasks being carried out as some tasks can’t be split between cores and therefore having more cores is no quicker than having one
 # 3. Cache Memory:
-- **Definition**: Cache memory is a small amount of high-speed memory located inside the CPU. It stores frequently used instructions to improve processing speed.
-    - **Impact**:
-        - Reduces the time needed to access data from main memory (RAM).
-        - Larger or faster cache allows quicker data access.
-    - Example: When you use a web browser, it often stores copies of web pages, images, and other resources in a **cache** to improve loading times for frequently visited sites. 
-		**How It Works**:
-		1. **First Visit**: When you visit a website for the first time, your browser downloads all the necessary files (HTML, CSS, images) from the server and saves them in its cache.
-		2. **Subsequent Visits**: On your next visit to the same website, the browser first checks its cache to see if it already has the files needed to display the page. If the files are in the cache, it loads them quickly from local storage instead of downloading them again from the server, resulting in faster loading times.
-    - **Types of Cache**:
+- The cache is part of primary storage and is used to store frequently used data and instructions
+- It is used as it’s closer to the CPU than RAM and therefore is faster to retrieve data from (some of the cache is included within each core)
+- The more cache there is, the more data can be stored which speeds up the performance of the CPU
+	- E.g. A website you visit often will be stored in the cache so that the next time you visit the website it can load it up more quickly. When the webpage is updated, what is stored in the cache will be updated too
+- **Types of Cache**:
 
 | Level  | Speed               | Size                     | Location              | Purpose                            |
 | ------ | ------------------- | ------------------------ | --------------------- | ---------------------------------- |
